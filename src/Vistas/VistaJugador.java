@@ -1,6 +1,7 @@
 
 package Vistas;
 
+import Logica.LogicaJugador;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -94,8 +95,9 @@ public class VistaJugador extends JFrame{
     private void siguienteVista(){
         String nombre = txtNombre.getText();
         if(!nombre.trim().isEmpty() || nombre.trim().length() > 0){
+            LogicaJugador jugador = new LogicaJugador(nombre);
             dispose();
-            //Abrir la venta de Categoria     
+            VistaCategorias vistacategoria = new VistaCategorias(jugador);    
         }
         else{
             JOptionPane.showMessageDialog(null,"Por favor ingrese su nombre", 
@@ -121,12 +123,12 @@ public class VistaJugador extends JFrame{
 
         @Override
         public void keyPressed(KeyEvent e) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+            
         }
 
         @Override
         public void keyReleased(KeyEvent e) {
-            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+           
         }
     };
     
