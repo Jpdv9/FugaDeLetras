@@ -1,14 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package Main;
 
 import Vistas.VistaInicio;
 
 /**
  *
- * @author jeanp
+ * AUTORES
+ * FRANKLIN AGUIRRE ORTIZ 201841743
+ * JEAN PAUL DAVALOS VALENCIA 201832375
  */
 public class Main {
 
