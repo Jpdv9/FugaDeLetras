@@ -8,17 +8,20 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+
+
 /**
  *
  * @author jeanp
  */
+
 public class VistaInicio extends JFrame{
     
+
     private JLabel lblTitulo;
     private JButton btnJugar;
     private JButton btnInstrucciones;
     private JPanel jpContenido;
-    
     
     public VistaInicio(){
         iniciarComponentes();
@@ -33,7 +36,6 @@ public class VistaInicio extends JFrame{
     private void iniciarComponentes(){
         jpContenido = new JPanel();
         add(jpContenido);
-        
         lblTitulo = new JLabel("FUGA DE LETRAS");
         lblTitulo.setBounds(175,80,250,60);
         lblTitulo.setFont(new Font ("Agency FB", Font.BOLD, 30));
@@ -67,9 +69,12 @@ public class VistaInicio extends JFrame{
         ActionListener instrucciones = new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose(); 
+                VistaInstrucciones vistainstrucciones = new VistaInstrucciones() ; 
+                dispose();
             }       
         };
         btnInstrucciones.addActionListener(instrucciones);
+
     }
+
 }

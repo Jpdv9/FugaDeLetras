@@ -36,22 +36,5 @@ public class LogicaJuego {
 
     
     
-    /*static String getPalabraAleatoria(){
-        
-        if(LogicaJuego.palabra.isEmpty()){
-            String palabra = "";
-            if(LogicaJuego.opcion >= 0){
-                Random aleatorio = new Random();
-                int i = aleatorio.nextInt(opciones[LogicaJuego.opcion].length);
-                
-                LogicaJuego.palabra = opciones[LogicaJuego.opcion][i];
-            }
-            
-            return LogicaJuego.palabra;
-        }
-        else{
-            return LogicaJuego.palabra;
-        }*/
-    
     
 }
