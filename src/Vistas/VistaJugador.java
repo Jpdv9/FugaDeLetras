@@ -23,6 +23,7 @@ import javax.swing.JTextField;
  */
 public class VistaJugador extends JFrame{
     
+    private Fondo jpFondo;
     private JLabel lblNombre;
     private JTextField txtNombre;
     private JButton btnSiguiente;
@@ -31,16 +32,19 @@ public class VistaJugador extends JFrame{
     
     public VistaJugador(){
         iniciarComponentes();
+    }
+    
+    private void iniciarComponentes(){
+        //crear panel
         setTitle("Fuga de Letras");
         setSize(500,500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
-    }
-    
-    private void iniciarComponentes(){
         
+        jpFondo = new Fondo("/IMAGENES/PantallaJugador.jpg");
         jpContenido = new JPanel();
+        jpFondo.setSize(500,500);
         add(jpContenido);
         
         lblNombre = new JLabel("Escriba Tu Nombre");
@@ -67,6 +71,7 @@ public class VistaJugador extends JFrame{
         jpContenido.add(txtNombre);
         jpContenido.add(btnSiguiente);
         jpContenido.add(btnAtras);
+        jpContenido.add(jpFondo);
         
         ManejarEvento manejarEvento = new ManejarEvento();
         
