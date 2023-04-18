@@ -30,7 +30,7 @@ public class VistaInstrucciones extends JFrame{
     jpContenido = new JPanel();
         add(jpContenido);
         
-        lblTexto = new JLabel("<html><body>Intrucciones: <br> las intrucciones del juego son muy sencillas , comienzas escribiendo tu nombre para poder jugar, de ahi pulsas el boton suguiente y escoges la categoria que mas te llame la atencion para empezar a jugar, de ahi se te va a mostrar una palabra alusiva a la categoria que escogiste, a esta le faltara una vocal, la cual tines que encontrar, escoge la opcion correcta y disfruta, en caso tal de que te llegues a equivocar puedes intentar con otras palabras, animo y explota tus conocimienots <br>Gracias por leer, Exitos en el juego </body></html>");
+        lblTexto = new JLabel("<html><body>Intrucciones: <br> las intrucciones del juego son muy sencillas , comienzas escribiendo tu nombre para poder jugar, de ahi pulsas el boton suguiente y escoges la categoria que mas te llame la atencion para empezar a jugar, de ahi se te va a mostrar una palabra alusiva a la categoria que escogiste, a esta le faltara una vocal, la cual tines que encontrar, escoge la opcion correcta y disfruta, en caso tal de que te llegues a equivocar puedes intentar con otras palabras, animo y explota tus conocimientos <br>Gracias por leer, Exitos en el juego </body></html>");
         lblTexto.setBounds(50,50,550,220);
         lblTexto.setFont(new Font ("Agency FB", Font.BOLD, 20));
         lblTexto.setHorizontalAlignment(JLabel.LEFT);
