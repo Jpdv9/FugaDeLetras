@@ -1,5 +1,7 @@
 package Logica;
 
+import javax.naming.Context;
+
 /**
  *
  * @author jeanp
@@ -17,7 +19,7 @@ public class LogicaJugador {
     }
     
     public String getNombre(){
-        return nombre;
+        return this.nombre;
     }
     
     public void setNombre(String nombre){

@@ -97,7 +97,7 @@ public class VistaJugador extends JFrame{
         if(!nombre.trim().isEmpty() || nombre.trim().length() > 0){
             LogicaJugador jugador = new LogicaJugador(nombre);
             dispose();
-            VistaCategorias vistacategoria = new VistaCategorias(jugador);    
+            VistaCategorias vistacategoria = new VistaCategorias(jugador); 
         }
         else{
             JOptionPane.showMessageDialog(null,"Por favor ingrese su nombre", 

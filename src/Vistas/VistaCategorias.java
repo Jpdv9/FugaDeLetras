@@ -66,8 +66,10 @@ public class VistaCategorias extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e){
                 LogicaJuego.opcion = 0;
-                VistaJuego vistajuego = new VistaJuego();
-                System.out.println(LogicaJuego.opciones);
+                
+                LogicaJugador jugador = new LogicaJugador();
+                VistaJuego vistajuego = new VistaJuego(jugador);
+                System.out.println(LogicaJuego.palabra);
                 dispose();
             }
         });
@@ -76,7 +78,9 @@ public class VistaCategorias extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e){
                 LogicaJuego.opcion = 1;
-                VistaJuego vistajuego = new VistaJuego();
+                
+                LogicaJugador jugador = new LogicaJugador();
+                VistaJuego vistajuego = new VistaJuego(jugador);
                 dispose();
             }
         });
@@ -85,7 +89,10 @@ public class VistaCategorias extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e){
                 LogicaJuego.opcion = 2;
-                VistaJuego vistajuego = new VistaJuego();
+                
+                LogicaJugador jugador = new LogicaJugador();
+               
+                VistaJuego vistajuego = new VistaJuego(jugador);
                 dispose();
             }
         });
