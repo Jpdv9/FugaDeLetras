@@ -46,7 +46,6 @@ public class VistaInicio extends JFrame{
         
         jpFondo.setSize(500,500);
         
-        //add(jpFondo);
         add(jpContenido);
         
         lblTitulo = new JLabel("FUGA DE LETRAS");

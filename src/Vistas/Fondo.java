@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Vistas;
  
 import java.awt.Dimension;
@@ -11,7 +8,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Franklin Aguirre y tomado del ejemplo adivino
+ * @author Franklin Aguirre y parte tomado del ejemplo adivino del la autoria del profe
  */
 class Fondo extends JPanel{
          ImageIcon imagen;
