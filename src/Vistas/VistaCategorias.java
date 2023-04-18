@@ -7,6 +7,7 @@ package Vistas;
 import Logica.LogicaJuego;
 import Logica.LogicaJugador;
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -19,6 +20,7 @@ import javax.swing.JPanel;
 
 public class VistaCategorias extends JFrame{
     
+    private Fondo jpFondo;
     private JLabel lblCategoria;
     private JButton btnAnimales;
     private JButton btnColores;
@@ -27,31 +29,38 @@ public class VistaCategorias extends JFrame{
     
     public VistaCategorias(LogicaJugador jugador){
         iniciarComponentes();
+
+    }
+    private void iniciarComponentes(){
+        //creacion panel 
         setTitle("Fuga de Letras");
-        setSize(500,500);
+        setSize(600,500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
-    }
-    private void iniciarComponentes(){
-    jpContenido = new JPanel();
+        Toolkit miPantalla = Toolkit.getDefaultToolkit();
+        
+        jpFondo = new Fondo("/IMAGENES/PantallaCategorias.jpg"); 
+        jpContenido = new JPanel();
+        
+        jpFondo.setSize(600,475);
         add(jpContenido);
         
         lblCategoria = new JLabel("Seleccione Una Categoria");
-        lblCategoria.setBounds(125,80,250,60);
+        lblCategoria.setBounds(175,80,250,60);
         lblCategoria.setFont(new Font ("Agency FB", Font.BOLD, 30));
         lblCategoria.setHorizontalAlignment(JLabel.LEFT);
         
         btnAnimales = new JButton("Animales");
-        btnAnimales.setBounds(175,180, 150,50);
+        btnAnimales.setBounds(225,180, 150,50);
         btnAnimales.setFont(new Font("Agency FB",Font.BOLD,21));
 
         btnColores = new JButton("Colores");
-        btnColores.setBounds(175,250, 150,50);
+        btnColores.setBounds(225,250, 150,50);
         btnColores.setFont(new Font("Agency FB",Font.BOLD,21));
         
         btnFrutas = new JButton("Futas");
-        btnFrutas.setBounds(175,320, 150,50);
+        btnFrutas.setBounds(225,320, 150,50);
         btnFrutas.setFont(new Font("Agency FB",Font.BOLD,21));
         
         jpContenido.setSize(500,500);
@@ -61,6 +70,7 @@ public class VistaCategorias extends JFrame{
         jpContenido.add(btnAnimales);
         jpContenido.add(btnColores);
         jpContenido.add(btnFrutas);
+        jpContenido.add(jpFondo);
         
         btnAnimales.addActionListener(new ActionListener(){
             @Override
