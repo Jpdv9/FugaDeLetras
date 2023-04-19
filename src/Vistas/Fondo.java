@@ -1,0 +1,28 @@
+
+package Vistas;
+ 
+import java.awt.Dimension;
+import java.awt.Graphics;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel; 
+
+/**
+ *
+ * @author Franklin Aguirre y parte tomado del ejemplo adivino del la autoria del profe
+ */
+class Fondo extends JPanel{
+         ImageIcon imagen;
+         String nombre;
+    public  Fondo(String nombre){
+        this.nombre = nombre;
+     }
+    @Override
+    public void paint(Graphics g){
+        Dimension tamano = getSize();
+        imagen = new ImageIcon(getClass().getResource(nombre));
+        g.drawImage(imagen.getImage(),0,0, getWidth(),getHeight(),this);
+        setOpaque(false);
+        super.paint(g);
+    }
+}
+  

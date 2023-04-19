@@ -1,6 +1,7 @@
 package Logica;
 
 import java.util.Random;
+import javax.swing.JOptionPane;
 /**
  *
  * @author jeanp
@@ -8,6 +9,7 @@ import java.util.Random;
 public class LogicaJuego {
     
     public static int opcion = -1;
+    public static String letra = "";
     public static String palabra = "";
     
     public static final String[][] opciones = 
@@ -33,8 +35,8 @@ public class LogicaJuego {
         ocultar[i] = '_';
         return String.valueOf(ocultar);
     }
-
     
-    
-    
+    public static boolean verificarLetra(String letra) {
+        return palabra.contains(letra);
+    }
 }

@@ -1,6 +1,7 @@
 package Vistas;
 
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -17,25 +18,36 @@ import javax.swing.JPanel;
 
 public class VistaInicio extends JFrame{
     
-
+    private Fondo jpFondo;
     private JLabel lblTitulo;
     private JButton btnJugar;
     private JButton btnInstrucciones;
     private JPanel jpContenido;
     
+  
     public VistaInicio(){
         iniciarComponentes();
+        
+    }
+    
+      
+    
+    private void iniciarComponentes(){
+        //configuracion de la pantalla
         setTitle("Fuga de Letras");
         setSize(500,500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
+        Toolkit miPantalla = Toolkit.getDefaultToolkit();
         
-    }
-    
-    private void iniciarComponentes(){
+        jpFondo = new Fondo("/IMAGENES/PantallaInicio.jpg"); 
         jpContenido = new JPanel();
+        
+        jpFondo.setSize(500,500);
+        
         add(jpContenido);
+        
         lblTitulo = new JLabel("FUGA DE LETRAS");
         lblTitulo.setBounds(175,80,250,60);
         lblTitulo.setFont(new Font ("Agency FB", Font.BOLD, 30));
@@ -55,6 +67,8 @@ public class VistaInicio extends JFrame{
         jpContenido.add(lblTitulo);
         jpContenido.add(btnJugar);
         jpContenido.add(btnInstrucciones);
+        jpContenido.add(jpFondo);
+        
         
         ActionListener jugar = new ActionListener(){
             @Override
@@ -74,7 +88,8 @@ public class VistaInicio extends JFrame{
             }       
         };
         btnInstrucciones.addActionListener(instrucciones);
-
+        
     }
 
+ 
 }
