@@ -37,9 +37,9 @@ public class VistaInstrucciones extends JFrame{
         jpFondo.setSize(670,650);
         add(jpContenido);
         
-        lblTexto = new JLabel("<html><body>Intrucciones: <br> las intrucciones del juego son muy sencillas , comienzas dando un click en el boton jugar, despues escribes tu nombre para poder jugar, de ahi pulsas el boton suguiente y escoges la categoria que mas te llame la atencion para empezar a jugar, de ahi se te va a mostrar una palabra correspondiente a la categoria que escogiste junto a una lustracion de lo que es esta palabra, a esta le faltara una vocal, la cual tienes que encontrar y completar, escoge la opcion correcta y disfruta, en caso tal de que te llegues a equivocarte puedes intentar con otras palabras y las demas categorias, animo y explota tus conocimientos. <br>Gracias por leer, Exitos en el juego y explota tu conocimiento :) </body></html>");
-        lblTexto.setBounds(50,50,550,220);
-        lblTexto.setFont(new Font ("Agency FB", Font.BOLD, 20));
+        lblTexto = new JLabel("<html><body>Instrucciones: <br> las instrucciones del juego son muy sencillas , comienzas dando un click en el boton jugar, despues escribes tu nombre para poder jugar, de ahi pulsas el boton suguiente y escoges la categoria que mas te llame la atencion para empezar a jugar, de ahi se te va a mostrar una palabra correspondiente a la categoria que escogiste junto a una lustracion de lo que es esta palabra, a esta le faltara una vocal, la cual tienes que encontrar y completar, escoge la opcion correcta y disfruta, en caso tal de que te llegues a equivocarte puedes intentar con otras palabras y las demas categorias, animo y explota tus conocimientos. <br>Gracias por leer, Exitos en el juego y explota tu conocimiento :) </body></html>");
+        lblTexto.setBounds(50,50,550,420);
+        lblTexto.setFont(new Font ("Agency FB", Font.BOLD, 25));
         lblTexto.setHorizontalAlignment(JLabel.LEFT);
         
         btnJugar = new JButton("Jugar");

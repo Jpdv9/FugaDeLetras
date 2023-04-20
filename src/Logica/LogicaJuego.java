@@ -1,7 +1,6 @@
 package Logica;
 
 import java.util.Random;
-import javax.swing.JOptionPane;
 /**
  *
  * @author jeanp
@@ -50,6 +49,19 @@ public class LogicaJuego {
         letraOculta = "";
         palabraRandom = 0;
         letraRandom = 0;
+        
+        palabraAleatoria();
+        letraOculta = letraAleatoria();
+    }
+    public static void ReseteoTotal(){
+        palabra = "";
+        letra = "";
+        letraOculta = "";
+        palabraRandom = 0;
+        letraRandom = 0;
+        correctas = 0;
+        incorrectas = 0;
+        numeroPalabras = 1;
         
         palabraAleatoria();
         letraOculta = letraAleatoria();

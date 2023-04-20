@@ -25,6 +25,7 @@ import javax.swing.JTextField;
  */
 public class VistaJuego extends JFrame{
     
+    private Fondo jpFondo;
     private JLabel lblNombre;
     private JLabel lblNombreJugador;
     private JLabel lblNumeroCorrectas;
@@ -53,14 +54,16 @@ public class VistaJuego extends JFrame{
     
     
     private void iniciarComponentes(){
-        
+        jpFondo = new Fondo("/IMAGENES/Pantalla Juego.jpg"); 
         jpContenido = new JPanel();
+        jpFondo.setSize(800,475);
+        
         add(jpContenido);
         
         
         
         lblNombre = new JLabel("NOMBRE: ");
-        lblNombre.setBounds(50,20, 100, 100);
+        lblNombre.setBounds(25,18, 100, 100);
         
         String nombre = jugador.getNombre();
         
@@ -68,7 +71,7 @@ public class VistaJuego extends JFrame{
         nombre = nombre.substring(0,1).toUpperCase() +
                  nombre.substring(1).toLowerCase();
         lblNombreJugador = new JLabel(nombre);
-        lblNombreJugador.setBounds(100,20, 100,50);
+        lblNombreJugador.setBounds(100,40, 100,50);
         lblNombreJugador.setForeground(Color.GRAY);
         lblNombreJugador.setFont(new Font("arial", Font.BOLD, 18));
         
@@ -88,7 +91,7 @@ public class VistaJuego extends JFrame{
         lblPalabra.setBounds(350,190,300, 50); 
         lblPalabra.setFont(new Font("Agency FB",Font.BOLD,40));
         
-        lblLexema = new JLabel("Numero de palabras: ");
+        lblLexema = new JLabel("<html> <u>Numero de palabras: __  </u> </html>");
         lblLexema.setBounds(225,100,150,100);
         
         lblNumeroPalabras = new JLabel(String.valueOf(LogicaJuego.numeroPalabras));
@@ -120,6 +123,7 @@ public class VistaJuego extends JFrame{
         jpContenido.add(btnVerificar);
         jpContenido.add(btnTerminar);
         jpContenido.add(lblNombreJugador);
+        jpContenido.add(jpFondo);
         
         
         addWindowListener(new WindowAdapter() {
@@ -174,6 +178,7 @@ public class VistaJuego extends JFrame{
                             JOptionPane.YES_NO_OPTION, 
                             JOptionPane.WARNING_MESSAGE);
                 if(respuesta == JOptionPane.YES_OPTION){
+                    VistaEstadisticas vistaEstadisticas = new VistaEstadisticas(jugador);
                     dispose();
                 }
             }

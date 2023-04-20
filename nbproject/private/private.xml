@@ -3,13 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jeanp/OneDrive/Documents/NetBeansProjects/FugaDeLetras/src/Main/Main.java</file>
-            <file>file:/C:/Users/jeanp/OneDrive/Documents/NetBeansProjects/FugaDeLetras/src/Vistas/VistaJuego.java</file>
-            <file>file:/C:/Users/jeanp/OneDrive/Documents/NetBeansProjects/FugaDeLetras/src/Logica/LogicaJugador.java</file>
-            <file>file:/C:/Users/jeanp/OneDrive/Documents/NetBeansProjects/FugaDeLetras/src/Vistas/VistaJugador.java</file>
-            <file>file:/C:/Users/jeanp/OneDrive/Documents/NetBeansProjects/FugaDeLetras/src/Vistas/VistaCategorias.java</file>
-            <file>file:/C:/Users/jeanp/OneDrive/Documents/NetBeansProjects/FugaDeLetras/src/Vistas/VistaInicio.java</file>
-            <file>file:/C:/Users/jeanp/OneDrive/Documents/NetBeansProjects/FugaDeLetras/src/Logica/LogicaJuego.java</file>
+            <file>file:/C:/Users/Franklin%20Aguirre/Documents/NetBeansProjects/FugaDeLetras/src/IMAGENES/PantallaJugador.jpg</file>
+            <file>file:/C:/Users/Franklin%20Aguirre/Documents/NetBeansProjects/FugaDeLetras/src/Logica/LogicaJuego.java</file>
+            <file>file:/C:/Users/Franklin%20Aguirre/Documents/NetBeansProjects/FugaDeLetras/src/Vistas/VistaCategorias.java</file>
+            <file>file:/C:/Users/Franklin%20Aguirre/Documents/NetBeansProjects/FugaDeLetras/src/Vistas/Fondo.java</file>
+            <file>file:/C:/Users/Franklin%20Aguirre/Documents/NetBeansProjects/FugaDeLetras/src/Vistas/VistaInicio.java</file>
+            <file>file:/C:/Users/Franklin%20Aguirre/Documents/NetBeansProjects/FugaDeLetras/src/Vistas/VistaInstrucciones.java</file>
+            <file>file:/C:/Users/Franklin%20Aguirre/Documents/NetBeansProjects/FugaDeLetras/src/Main/Main.java</file>
+            <file>file:/C:/Users/Franklin%20Aguirre/Documents/NetBeansProjects/FugaDeLetras/src/Vistas/VistaJugador.java</file>
+            <file>file:/C:/Users/Franklin%20Aguirre/Documents/NetBeansProjects/FugaDeLetras/src/Vistas/VistaEstadisticas.java</file>
+            <file>file:/C:/Users/Franklin%20Aguirre/Documents/NetBeansProjects/FugaDeLetras/src/Vistas/VistaJuego.java</file>
+            <file>file:/C:/Users/Franklin%20Aguirre/Documents/NetBeansProjects/FugaDeLetras/src/IMAGENES/PantallaInicio.jpg</file>
         </group>
     </open-files>
 </project-private>

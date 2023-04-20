@@ -1,7 +1,6 @@
 package Vistas;
 
 import java.awt.Font;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -39,7 +38,6 @@ public class VistaInicio extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
-        Toolkit miPantalla = Toolkit.getDefaultToolkit();
         
         jpFondo = new Fondo("/IMAGENES/PantallaInicio.jpg"); 
         jpContenido = new JPanel();
@@ -61,7 +59,7 @@ public class VistaInicio extends JFrame{
         btnInstrucciones.setBounds(175,250, 150,50);
         btnInstrucciones.setFont(new Font("Agency FB",Font.BOLD,21));
         
-        jpContenido.setSize(500,500);
+        jpContenido.setSize(550,475);
         jpContenido.setLayout(null);
         
         jpContenido.add(lblTitulo);

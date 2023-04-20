@@ -48,7 +48,7 @@ public class VistaJugador extends JFrame{
         jpFondo.setSize(500,500);
         add(jpContenido);
         
-        lblNombre = new JLabel("Escriba Tu Nombre");
+        lblNombre = new JLabel("Escribe Tu Nombre");
         lblNombre.setBounds(140,80,500,65);
         lblNombre.setFont(new Font ("arial", Font.BOLD, 25));
         
