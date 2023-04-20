@@ -63,7 +63,7 @@ public class VistaJuego extends JFrame{
         
         
         lblNombre = new JLabel("NOMBRE: ");
-        lblNombre.setBounds(25,18, 100, 100);
+        lblNombre.setBounds(25,31, 100, 100);
         
         String nombre = jugador.getNombre();
         
@@ -71,41 +71,41 @@ public class VistaJuego extends JFrame{
         nombre = nombre.substring(0,1).toUpperCase() +
                  nombre.substring(1).toLowerCase();
         lblNombreJugador = new JLabel(nombre);
-        lblNombreJugador.setBounds(100,40, 100,50);
+        lblNombreJugador.setBounds(100,55, 100,50);
         lblNombreJugador.setForeground(Color.GRAY);
         lblNombreJugador.setFont(new Font("arial", Font.BOLD, 18));
         
         lblCorrectas = new JLabel("Correctas: ");
-        lblCorrectas.setBounds(250,20,100,100);
+        lblCorrectas.setBounds(600,5,100,100);
         
         lblNumeroCorrectas = new JLabel(String.valueOf(LogicaJuego.correctas));
-        lblNumeroCorrectas.setBounds(325,20,100,100);
+        lblNumeroCorrectas.setBounds(670,5,100,100);
         
         lblIncorrectas = new JLabel("Incorrectas: ");
-        lblIncorrectas.setBounds(350, 20, 100, 100);
+        lblIncorrectas.setBounds(690, 5, 100, 100);
         
         lblNumeroIncorrectas = new JLabel(String.valueOf(LogicaJuego.correctas));
-        lblNumeroIncorrectas.setBounds(425,20,100,100);
+        lblNumeroIncorrectas.setBounds(765,5,100,100);
         
         lblPalabra = new JLabel(LogicaJuego.letraAleatoria());
-        lblPalabra.setBounds(350,190,300, 50); 
+        lblPalabra.setBounds(340,185,300, 50); 
         lblPalabra.setFont(new Font("Agency FB",Font.BOLD,40));
         
         lblLexema = new JLabel("<html> <u>Numero de palabras: __  </u> </html>");
-        lblLexema.setBounds(225,100,150,100);
+        lblLexema.setBounds(330,100,150,100);
         
         lblNumeroPalabras = new JLabel(String.valueOf(LogicaJuego.numeroPalabras));
-        lblNumeroPalabras.setBounds(350,125,50,50);
+        lblNumeroPalabras.setBounds(450,125,50,50);
         
         txtVerificar = new JTextField(1);
-        txtVerificar.setBounds(325,250,150,25);
+        txtVerificar.setBounds(325,242,150,25);
         
         
         btnVerificar =new JButton("Verificar");
-        btnVerificar.setBounds(350, 300, 100, 50);
+        btnVerificar.setBounds(360, 280, 90, 40);
         
         btnTerminar = new JButton("TERMINAR");
-        btnTerminar.setBounds(300, 400, 200, 50);
+        btnTerminar.setBounds(430, 400, 150, 50);
         
         
         jpContenido.setSize(800,500);

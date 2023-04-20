@@ -66,6 +66,18 @@ public class LogicaJuego {
         palabraAleatoria();
         letraOculta = letraAleatoria();
     }
+    public static float PorcentajeFallos(){
+        float Intentosincorrectas=incorrectas;
+        int IntentosTotales =incorrectas+correctas;
+        float PorcentajeFallosTotales= ((Intentosincorrectas/IntentosTotales)*100) ;
+        return PorcentajeFallosTotales;
+    }
+    public static float PorcentajeAciertos(){
+        float Intentoscorrectas=correctas;
+        int IntentosTotales =incorrectas+correctas;
+        float PorcentajeAciertosTotales= ((Intentoscorrectas/IntentosTotales)*100) ;
+        return PorcentajeAciertosTotales;
+    }
     
     
 }
