@@ -9,7 +9,13 @@ import javax.swing.JOptionPane;
 public class LogicaJuego {
     
     public static int opcion = -1;
+    public static int correctas = 0;
+    public static int incorrectas = 0;
+    public static int numeroPalabras = 1;
+    public static int palabraRandom = 0;
+    public static int letraRandom = 0;
     public static String letra = "";
+    public static String letraOculta = "";
     public static String palabra = "";
     
     public static final String[][] opciones = 
@@ -18,25 +24,36 @@ public class LogicaJuego {
         {"AZUL", "AMARILLO", "ROJO", "BLANCO", "NEGRO", "GRIS", "PURPURA", "VERDE", "ROSA", "VIOLETA"},
         {"MANZANA", "PERA", "NARANJA", "MANGO", "MANDARINA", "GUANABANA", "SANDIA", "BANANO", "MORA", "PIÑA"}
     };
-    
 
  
 
     public static String palabraAleatoria() {
         Random rand = new Random();
         int i = rand.nextInt(opciones[LogicaJuego.opcion].length);
+        palabraRandom = i;
         return LogicaJuego.palabra = opciones[LogicaJuego.opcion][i];
     }
     
     public static String letraAleatoria(){
         Random aleatorio = new Random();
         int i = aleatorio.nextInt(palabra.length());
+        letraRandom = i;
+        letra = String.valueOf(palabra.toCharArray()[letraRandom]);
         char[] ocultar = palabra.toCharArray();
         ocultar[i] = '_';
         return String.valueOf(ocultar);
     }
     
-    public static boolean verificarLetra(String letra) {
-        return palabra.contains(letra);
+    public static void reseteo(){
+        palabra = "";
+        letra = "";
+        letraOculta = "";
+        palabraRandom = 0;
+        letraRandom = 0;
+        
+        palabraAleatoria();
+        letraOculta = letraAleatoria();
     }
+    
+    
 }

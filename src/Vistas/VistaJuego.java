@@ -27,7 +27,11 @@ public class VistaJuego extends JFrame{
     
     private JLabel lblNombre;
     private JLabel lblNombreJugador;
+    private JLabel lblNumeroCorrectas;
+    private JLabel lblNumeroIncorrectas;
     private JLabel lblPalabra;
+    private JLabel lblLexema;
+    private JLabel lblNumeroPalabras;
     private JLabel lblCorrectas;
     private JLabel lblIncorrectas;
     private JTextField txtVerificar;
@@ -71,12 +75,24 @@ public class VistaJuego extends JFrame{
         lblCorrectas = new JLabel("Correctas: ");
         lblCorrectas.setBounds(250,20,100,100);
         
+        lblNumeroCorrectas = new JLabel(String.valueOf(LogicaJuego.correctas));
+        lblNumeroCorrectas.setBounds(325,20,100,100);
+        
         lblIncorrectas = new JLabel("Incorrectas: ");
         lblIncorrectas.setBounds(350, 20, 100, 100);
+        
+        lblNumeroIncorrectas = new JLabel(String.valueOf(LogicaJuego.correctas));
+        lblNumeroIncorrectas.setBounds(425,20,100,100);
         
         lblPalabra = new JLabel(LogicaJuego.letraAleatoria());
         lblPalabra.setBounds(350,190,300, 50); 
         lblPalabra.setFont(new Font("Agency FB",Font.BOLD,40));
+        
+        lblLexema = new JLabel("Numero de palabras: ");
+        lblLexema.setBounds(225,100,150,100);
+        
+        lblNumeroPalabras = new JLabel(String.valueOf(LogicaJuego.numeroPalabras));
+        lblNumeroPalabras.setBounds(350,125,50,50);
         
         txtVerificar = new JTextField(1);
         txtVerificar.setBounds(325,250,150,25);
@@ -94,8 +110,12 @@ public class VistaJuego extends JFrame{
         
         jpContenido.add(lblNombre);
         jpContenido.add(lblPalabra);
+        jpContenido.add(lblLexema);
+        jpContenido.add(lblNumeroPalabras);
         jpContenido.add(lblCorrectas);
+        jpContenido.add(lblNumeroCorrectas);
         jpContenido.add(lblIncorrectas);
+        jpContenido.add(lblNumeroIncorrectas);
         jpContenido.add(txtVerificar);
         jpContenido.add(btnVerificar);
         jpContenido.add(btnTerminar);
@@ -109,15 +129,55 @@ public class VistaJuego extends JFrame{
             }
         });
         
-        System.out.println(LogicaJuego.palabraAleatoria());
-        System.out.println(LogicaJuego.letraAleatoria());
         
         btnVerificar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
+                String letra = txtVerificar.getText().toUpperCase();
                 
+                System.out.println(letra);
+                System.out.println(LogicaJuego.letra);
+                
+                if(letra.equals(LogicaJuego.letra)){
+                    LogicaJuego.correctas++;
+                    LogicaJuego.numeroPalabras++;
+                    
+                    lblNumeroCorrectas.setText(String.valueOf(LogicaJuego.correctas));
+                    lblNumeroPalabras.setText(String.valueOf(LogicaJuego.numeroPalabras));
+                    
+                    JOptionPane.showMessageDialog(null, "Haz acertado la letra");
+                    
+                    LogicaJuego.reseteo();
+                    lblPalabra.setText(LogicaJuego.letraOculta);
+                    
+                    txtVerificar.setText("");
+                }
+                else{
+                    LogicaJuego.incorrectas++;
+                    lblNumeroIncorrectas.setText(String.valueOf(LogicaJuego.incorrectas));
+                    
+                    JOptionPane.showMessageDialog(null, "Haz errado la letra");
+                    
+                    txtVerificar.setText("");
+                }
             }
             
+        });
+        
+        btnTerminar.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int respuesta;
+
+                respuesta = JOptionPane.showConfirmDialog(
+                            null,"¿Quieres terminar el juego?", "Advertencia",
+                            JOptionPane.YES_NO_OPTION, 
+                            JOptionPane.WARNING_MESSAGE);
+                if(respuesta == JOptionPane.YES_OPTION){
+                    dispose();
+                }
+            }
+
         });
        
     }

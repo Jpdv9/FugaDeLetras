@@ -21,6 +21,7 @@ import javax.swing.JPanel;
 public class VistaCategorias extends JFrame{
     
     private Fondo jpFondo;
+    private LogicaJugador jugador;
     private JLabel lblCategoria;
     private JButton btnAnimales;
     private JButton btnColores;
@@ -28,7 +29,9 @@ public class VistaCategorias extends JFrame{
     private JPanel jpContenido;
     
     public VistaCategorias(LogicaJugador jugador){
+        this.jugador = jugador;
         iniciarComponentes();
+        
 
     }
     private void iniciarComponentes(){
@@ -76,10 +79,10 @@ public class VistaCategorias extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e){
                 LogicaJuego.opcion = 0;
+                System.out.println();
                 
-                LogicaJugador jugador = new LogicaJugador();
+
                 VistaJuego vistajuego = new VistaJuego(jugador);
-                System.out.println(LogicaJuego.palabra);
                 dispose();
             }
         });
@@ -89,7 +92,7 @@ public class VistaCategorias extends JFrame{
             public void actionPerformed(ActionEvent e){
                 LogicaJuego.opcion = 1;
                 
-                LogicaJugador jugador = new LogicaJugador();
+
                 VistaJuego vistajuego = new VistaJuego(jugador);
                 dispose();
             }
@@ -100,7 +103,7 @@ public class VistaCategorias extends JFrame{
             public void actionPerformed(ActionEvent e){
                 LogicaJuego.opcion = 2;
                 
-                LogicaJugador jugador = new LogicaJugador();
+
                
                 VistaJuego vistajuego = new VistaJuego(jugador);
                 dispose();

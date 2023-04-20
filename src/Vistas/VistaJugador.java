@@ -24,6 +24,7 @@ import javax.swing.JTextField;
 public class VistaJugador extends JFrame{
     
     private Fondo jpFondo;
+    private LogicaJugador jugador;
     private JLabel lblNombre;
     private JTextField txtNombre;
     private JButton btnSiguiente;
@@ -100,6 +101,7 @@ public class VistaJugador extends JFrame{
     private void siguienteVista(){
         String nombre = txtNombre.getText();
         if(!nombre.trim().isEmpty() || nombre.trim().length() > 0){
+            
             LogicaJugador jugador = new LogicaJugador(nombre);
             dispose();
             VistaCategorias vistacategoria = new VistaCategorias(jugador); 
