@@ -60,7 +60,7 @@ public class VistaCategorias extends JFrame{
         btnColores.setBounds(225,250, 150,50);
         btnColores.setFont(new Font("Agency FB",Font.BOLD,21));
         
-        btnFrutas = new JButton("Futas");
+        btnFrutas = new JButton("Frutas");
         btnFrutas.setBounds(225,320, 150,50);
         btnFrutas.setFont(new Font("Agency FB",Font.BOLD,21));
         

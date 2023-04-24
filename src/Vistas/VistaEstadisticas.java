@@ -82,19 +82,19 @@ public class VistaEstadisticas extends JFrame {
         lblCantPalabras.setFont(new Font ("Agency FB", Font.BOLD, 20));
         lblCantPalabras.setHorizontalAlignment(JLabel.LEFT);
         
-        lblFallos = new JLabel("FALLOS : ");
+        lblFallos = new JLabel("INCORRECTAS : ");
         lblFallos.setBounds(35,220,250,60);
         lblFallos.setFont(new Font ("Agency FB", Font.BOLD, 20));
         lblFallos.setHorizontalAlignment(JLabel.LEFT);
         
         
         lblCantFallos = new JLabel(String.valueOf(LogicaJuego.incorrectas));
-        lblCantFallos.setBounds(150,220,250,60);
+        lblCantFallos.setBounds(160,220,250,60);
         lblCantFallos.setFont(new Font ("Agency FB", Font.BOLD, 20));
         lblCantFallos.setHorizontalAlignment(JLabel.LEFT);
         
         lblPorcentajeFallos = new JLabel(String.valueOf(LogicaJuego.PorcentajeFallos())+" %");
-        lblPorcentajeFallos.setBounds(170,220,250,60);
+        lblPorcentajeFallos.setBounds(180,220,250,60);
         lblPorcentajeFallos.setFont(new Font ("Agency FB", Font.BOLD, 20));
         lblPorcentajeFallos.setHorizontalAlignment(JLabel.LEFT);
         
